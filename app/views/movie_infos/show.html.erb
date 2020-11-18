@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+<% @movie_infos.each do |movie_info| %>
+ <% end %>
+<p>
+  <strong>Title:</strong>
+  <%= @movie_info.title %>
+</p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= @movie_info.rating %>
+</p>
+
+<p>
+  <strong>Total gross:</strong>
+  <%= @movie_info.total_gross %>
+</p>
+
+<%= link_to 'Edit', edit_movie_info_path(@movie_info) %> |
+<%= link_to 'Back', movie_infos_path %>
