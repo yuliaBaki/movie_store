@@ -14,7 +14,9 @@
   <body>
     <header>
       <nav>
+      <div class="">
         <%= link_to image_tag("logo_movie"), root_path%>
+        </div>
         <ul>
           <li>
             <a href="/movie_infos">All events</a>
@@ -24,7 +26,7 @@
       </nav>
     </header>
     <header>
-      <h1>Flix</h1>
+      <h1 class="text-4xl">Flix</h1>
     </header>
     <div class="content">
       <%= yield %>
