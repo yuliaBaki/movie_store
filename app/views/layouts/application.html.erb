@@ -1,42 +1,39 @@
 <!DOCTYPE html>
 <html>
- <html>
   <head>
     <title>Super-Heroic Flix</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <link rel="stylesheet" media="all" href="/assets/movies.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" data-turbolinks-track="reload" />
-    <link rel="stylesheet" media="all" href="/assets/application.self-f0d704deea029cf000697e2c0181ec173a1b474645466ed843eb5ee7bb215794.css?body=1" data-turbolinks-track="reload" />
-    <script src="/packs/js/application-4e793d3ebc7e69100513.js" data-turbolinks-track="reload"></script>
-    <meta name="csrf-param" content="authenticity_token" />
-    <meta name="csrf-token" content="1jqaq6EPjEq6/e/nkhoL3czTGNIiYmOmIQq32yLl8GUqjp2X3GDkLkDhgyKmqVD7HDzzcEyG53HYLfbPQknJkA==" />
+    
   </head>
 
   <body>
-
-  <header> 
-    <nav>
-      <%= link_to image_tag("logo_movie"), root_path%>
-      <ul>
-        <li>
-          <a href="/movie_infos">All events</a>
-          <%= link_to "All movies" , root_path %>
-        </li> 
-      </ul>
-    </nav>
-  </header>
-  <header><h1>Flix</h1> </header>
-   <div class="content">
+    <header>
+      <nav>
+        <%= link_to image_tag("logo_movie"), root_path%>
+        <ul>
+          <li>
+            <a href="/movie_infos">All events</a>
+            <%= link_to "All movies" , root_path %>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <header>
+      <h1>Flix</h1>
+    </header>
+    <div class="content">
       <%= yield %>
     </div>
-  <footer>
-  <p>
-    Copyright &copy; 2005-<%= Time.now.year %>
-    <%= link_to 'The Pragmatic Studio','https://pragmaticstudio.com' %>
-  </p>
-</footer>
+    <footer>
+      <p>
+        Copyright &copy; 2005-<%= Time.now.year %>
+        <%= link_to 'The Pragmatic Studio','https://pragmaticstudio.com' %>
+      </p>
+    </footer>
   </body>
 </html>
