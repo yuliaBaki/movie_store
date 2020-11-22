@@ -1,7 +1,5 @@
 class MovieInfo < ApplicationRecord
-
-    def free?
-        total_gross.blank? || total_gross.zero?
-    end
-
+    def flop?
+        total_gross.blank? || total_gross == 0
+      end
 end

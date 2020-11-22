@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Super-Heroic Flix</title>
+    <title>Super-Heroic</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     
@@ -14,24 +14,20 @@
   <body>
     <header>
       <nav>
-      <div class="">
-        <%= link_to image_tag("logo_movie"), root_path%>
-        </div>
+        <%= link_to image_tag("logo"), root_path ,class:"hover:bg-transparent"%>
         <ul>
           <li>
-            <a href="/movie_infos">All events</a>
-            <%= link_to "All movies" , root_path %>
+            <%= link_to "All Movies", root_path , class:"text-white focus:outline-none hover:no-underline hover:bg-transparent" %>
           </li>
         </ul>
       </nav>
     </header>
-    <header>
-      <h1 class="text-4xl">Flix</h1>
-    </header>
+
     <div class="content">
       <%= yield %>
     </div>
-    <footer>
+
+    <footer class="hidden w-full h-16 lg:block">
       <p>
         Copyright &copy; 2005-<%= Time.now.year %>
         <%= link_to 'The Pragmatic Studio','https://pragmaticstudio.com' %>
