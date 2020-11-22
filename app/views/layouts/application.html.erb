@@ -10,28 +10,12 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     
   </head>
-
   <body>
-    <header>
-      <nav>
-        <%= link_to image_tag("logo"), root_path ,class:"hover:bg-transparent"%>
-        <ul>
-          <li>
-            <%= link_to "All Movies", root_path , class:"text-white focus:outline-none hover:no-underline hover:bg-transparent" %>
-          </li>
-        </ul>
-      </nav>
-    </header>
-
+  <%= render 'movie_infos/shared/header' %>
     <div class="content">
       <%= yield %>
     </div>
 
-    <footer class="hidden w-full h-16 lg:block">
-      <p>
-        Copyright &copy; 2005-<%= Time.now.year %>
-        <%= link_to 'The Pragmatic Studio','https://pragmaticstudio.com' %>
-      </p>
-    </footer>
+    <%= render 'movie_infos/shared/footer' %>
   </body>
 </html>

@@ -1,0 +1,18 @@
+<%= form_with(model: @movie_infos, local: true) do |form| %>
+    <%= form.label :title%>
+    <%= form.text_field  :title, autofocus:true%>
+
+    <%= form.label :description%>
+    <%= form.text_area  :description, row: 7%>
+
+    <%= form.label :rating%>
+    <%= form.text_field  :rating%>
+
+    <%= form.label :total_gross%>
+    <%= form.number_field  :total_gross%>
+
+    <%= form.label :starts_at%>
+    <%= form.datetime_select :starts_at, {ampm:true},{class: "datetime"}%>
+
+    <%= form.submit%>
+<%end%>

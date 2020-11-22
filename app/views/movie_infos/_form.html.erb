@@ -1,15 +1,4 @@
 <%= form_with(model: movie_info, local: true) do |form| %>
-  <% if movie_info.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(movie_info.errors.count, "error") %> prohibited this movie_info from being saved:</h2>
-
-      <ul>
-        <% movie_info.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
 
   <div class="field">
     <%= form.label :title %>
@@ -32,8 +21,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :released_on %>
-    <%= form.text_field :released_on %>
+    <%= form.label :starts_at %>
+    <%= form.text_field :starts_at %>
   </div>
 
   <div class="actions">

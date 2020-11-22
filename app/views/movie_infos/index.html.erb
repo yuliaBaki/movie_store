@@ -2,7 +2,7 @@
 <section class="movie">
   <div class="summary">
     <h2>
-      <%= link_to movie.title, movie_path(movie), class:"hover:bg-white hover:text-black hover:no-underline" %>
+      <%= link_to movie.title, movie_info_path(movie), class:" text-blue-400 hover:bg-white hover:text-black hover:no-underline" %>
     </h2>
     <div class="absolute right-0 top-0 text-right">
       <h3 class="bg-yellow-500 text-white m-1 p-2">
@@ -10,8 +10,15 @@
       </h3>
     </div>
     <p>
+      <%= movie.starts_at.year%> 
+    </p>
+    <p>
       <%= truncate(movie.description, length: 150, separator: ' ') %>
     </p>
   </div>
 </section>
 <% end %>
+
+<section class="admin">
+  <%= link_to "Add New Event", new_movie_info_path , class:"button"%>
+</section>

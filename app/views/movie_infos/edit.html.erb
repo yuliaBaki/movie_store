@@ -1,20 +1,3 @@
 <h1 class= "text-3xl font-bold text-blue-400">Editing <%=@movie_infos.title%></h1>
 
-<%= form_with(model: @movie_infos, local: true) do |form| %>
-    <%= form.label :title%>
-    <%= form.text_field  :title%>
-
-    <%= form.label :description%>
-    <%= form.text_area  :description, row: 7%>
-
-    <%= form.label :rating%>
-    <%= form.text_field  :rating%>
-
-    <%= form.label :total_gross%>
-    <%= form.number_field  :total_gross%>
-
-    <%= form.label :starts_at%>
-    <%= form.datetime_select :starts_at, {ampm:true},{class: "datetime"}%>
-
-    <%= form.submit%>
-<%end%>
+ <%= render 'movie_infos/shared/display' %>
