@@ -1,4 +1,7 @@
 <section class="movie-details">
+<div class="image">
+    <%= image_tag @movie_infos.image_file_name%>
+  </div>
   <div class="details">
     <h1 class= "font-bold text-blue-400"><%= @movie_infos.title %></h1>
     <h2>
@@ -8,6 +11,14 @@
       <%= @movie_infos.description %>
     </p>
     <table>
+    <tr>
+        <th>Director:</th>
+        <td><%= @movie_infos.director %></td>
+      </tr>
+      <tr>
+        <th>Duration:</th>
+        <td><%= @movie_infos.duration %></td>
+      </tr>
       <tr>
         <th class="text-xl text-blue-600">Total Price:</th>
         <td class="text-xl "><%= total_gross(@movie_infos) %></td>
@@ -17,6 +28,7 @@
 </section>
 <section class="admin ">
   <%= link_to 'Edit', edit_movie_info_path(@movie_infos), class: "button" %>
+  <%= link_to 'Delete', @movie_infos, class: "button", method: :delete, data: { confirm: "Really??!"} %>
 </section>
 
 <p class="pb-52 mb-56"></p>

@@ -7,93 +7,170 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 MovieInfo.create([
-    {
-      title: 'BugSmash',
-      location: 'Denver, CO',
-      total_gross: 0.00,
-      starts_at: 30.days.from_now,
-      description: %{
-        Join us for a fun evening of bug smashing! It's a great
-        way to get involved in open source projects whether you're
-        reporting bugs, fixing bugs, or even creating
-        a few bugs!
-      }.squish
-    },
-    {
-      title: 'Hackathon',
-      location: 'Austin, TX',
-      total_gross: 15.00,
-      starts_at: 45.days.from_now,
-      description: %{
-        Got a killer app idea you've been itching to work on? Hunker
-        down and hack away! This is an intense, focused day of hacking
-        on anything you want. The entry fee goes toward a bounty of cash
-        and prizes for winners in a variety of categories.
-      }.squish
-    },
-    {
-      title: 'Kata Camp',
-      location: 'Dallas, TX',
-      total_gross: 75.00,
-      starts_at: 65.days.from_now,
-      description: %{
-        Kata Camp is where developers go to practice their craft without interruptions. Skip the status reports and stand-up meetings of a typical project. Just get 'er done! Price includes a buffet lunch and a leather-bound journal to record your kata achievements.
-      }.squish
-    },
-    {
-      title: "Coffee 'n Code",
-      location: 'Portland, OR',
-      total_gross: 0.00,
-      starts_at: 20.days.ago,
-      description: %{
-        Start your day off right with a good cup of Joe while you sling some code with other local developers. By the time you hit the office, you'll be in the groove!
-      }.squish
-    },
-    {
-      title: 'Rails User Group',
-      location: 'Reston, VA',
-      total_gross: 0.00,
-      starts_at: 2.days.ago,
-      description: %{
-        Come enjoy a technical talk and meet local Rails developers! This week's topic is a comparison of editors, templating systems, and whether to use tabs or spaces.
-      }.squish
-    },
-    {
-      title: 'Ruby User Group',
-      location: 'Chigaco, IL',
-      total_gross: 0.00,
-      starts_at: 5.days.ago,
-      description: %{
-        Do you heart Ruby? So do we! Every week a local developer presents
-        a new Ruby-related topic to help you keep on top of your game.
-      }.squish
-    },
-    {
-      title: '5-Minute Lightning Talks',
-      location: 'Kansas City, MO',
-      total_gross: 15.00,
-      starts_at: 10.days.ago,
-      description: %{
-        Got a newfangled trick? A handy new tool? A just-released library? Here's your chance to share it! But you only get 5 minutes to present your must-know tip, so keep it snappy. Price includes an open ice cream and root beer float bar.
-      }.squish
-    },
-    {
-      title: 'Drone Zone',
-      location: 'Minneapolis, MN',
-      total_gross: 0.00,
-      starts_at: 90.days.from_now,
-      description: %{
-        What happens when software and hardware geeks get together?
-        Thing spin, whirl, and (possibly) collide! Everyone is welcome, whether you're new to hacking with drones and drone software, or have experience that reaches to the sky.
-      }.squish
-    },
-    {
-      title: 'Coding Ninjas',
-      location: 'San Diego, CA',
-      total_gross: 25.00,
-      starts_at: 10.days.from_now,
-      description: %{
-        Why ninjas? We have no idea, but the icon is cool. Don't miss this opportunity to show off your ninja moves.
-      }.squish
-    }
-  ])
+  {
+  title: 'Avengers: Endgame',
+    description:
+    %{
+      After the devastating events of Avengers: Infinity War, the universe
+      is in ruins. With the help of remaining allies, the Avengers assemble
+      once more in order to undo Thanos' actions and restore order to the universe.
+    }.squish,
+    released_on: "2019-04-26",
+    rating: 'PG-13',
+    total_gross: 1_223_641_414,
+    director: 'Anthony Russo',
+    duration: '181 min',
+    image_file_name: 'avengers-end-game.png'
+  },
+  {
+    title: 'Captain Marvel',
+    description:
+    %{
+      Carol Danvers becomes one of the universe's most powerful heroes when Earth is caught in the middle of a galactic war between two alien races.
+    }.squish,
+    released_on: "2019-03-08",
+    rating: 'PG-13',
+    total_gross: 1_110_662_849,
+    director: 'Anna Boden',
+    duration: '124 min',
+    image_file_name: 'captain-marvel.png'
+  },
+  {
+    title: 'Black Panther',
+    description:
+    %{
+      T'Challa, heir to the hidden but advanced kingdom of Wakanda, must step forward to lead his people into a new future and must confront a challenger from his country's past.
+    }.squish,
+    released_on: "2018-02-16",
+    rating: 'PG-13',
+    total_gross: 1_346_913_161,
+    director: 'Ryan Coogler',
+    duration: '134 min',
+    image_file_name: 'black-panther.png'
+  },
+  {
+    title: 'Avengers: Infinity War',
+    description:
+    %{
+      The Avengers and their allies must be willing to sacrifice all in an attempt to defeat the powerful Thanos before his blitz of devastation and ruin puts an end to the universe.
+    }.squish,
+    released_on: "2018-04-27",
+    rating: 'PG-13',
+    total_gross: 2_048_359_754,
+    director: 'Anthony Russo',
+    duration: '149 min',
+    image_file_name: 'avengers-infinity-war.png'
+  },
+  {
+    title: 'Green Lantern',
+    description:
+    %{
+      Reckless test pilot Hal Jordan is granted an alien ring that bestows him with otherworldly powers that inducts him into an intergalactic police force, the Green Lantern Corps.
+    }.squish,
+    released_on: "2011-06-17",
+    rating: 'PG-13',
+    total_gross: 219_851_172,
+    director: 'Martin Campbell',
+    duration: '114 min',
+    image_file_name: 'green-lantern.png'
+  },
+  {
+    title: 'Fantastic Four',
+    description:
+    %{
+      Four young outsiders teleport to an alternate and dangerous universe which alters their physical form in shocking ways. The four must learn to harness their new abilities and work together to save Earth from a former friend turned enemy.
+    }.squish,
+    released_on: "2015-08-07",
+    rating: 'PG-13',
+    total_gross: 168_257_860,
+    director: 'Josh Trank',
+    duration: '100 min',
+    image_file_name: 'fantastic-four.png'
+  },
+  {
+    title: 'Iron Man',
+    description:
+    %{
+      When wealthy industrialist Tony Stark is forced to build an
+      armored suit after a life-threatening incident, he ultimately
+      decides to use its technology to fight against evil.
+    }.squish,
+    released_on: "2008-05-02",
+    rating: 'PG-13',
+    total_gross: 585_366_247,
+    director: 'Jon Favreau',
+    duration: '126 min',
+    image_file_name: 'ironman.png'
+  },
+  {
+    title: 'Superman',
+    description:
+    %{
+      An alien orphan is sent from his dying planet to Earth, where
+      he grows up to become his adoptive home's first and greatest
+      super-hero.
+    }.squish,
+    released_on: "1978-12-15",
+    rating: 'PG',
+    total_gross: 300_451_603,
+    director: 'Richard Donner',
+    duration: '143 min',
+    image_file_name: 'superman.png'
+  },
+  {
+    title: 'Spider-Man',
+    description:
+    %{
+      When bitten by a genetically modified spider, a nerdy, shy, and
+      awkward high school student gains spider-like abilities that he
+      eventually must use to fight evil as a superhero after tragedy
+      befalls his family.
+    }.squish,
+    released_on: "2002-05-03",
+    rating: 'PG-13',
+    total_gross: 825_025_036,
+    director: 'Sam Raimi',
+    duration: '121 min',
+    image_file_name: 'spiderman.png'
+  },
+  {
+    title: 'Batman',
+    description:
+    %{
+      The Dark Knight of Gotham City begins his war on crime with his
+      first major enemy being the clownishly homicidal Joker.
+    }.squish,
+    released_on: "1989-06-23",
+    rating: 'PG-13',
+    total_gross: 411_348_924,
+    director: 'Tim Burton',
+    duration: '126 min',
+    image_file_name: 'batman.png'
+  },
+  {
+    title: "Catwoman",
+    description:
+    %{
+      Patience Philips seems destined to spend her life apologizing for taking up space. Despite her artistic ability she has a more than respectable career as a graphic designer.
+    }.squish,
+    released_on: "2004-07-23",
+    rating: "PG-13",
+    total_gross: 82_102_379,
+    director: "Jean-Christophe 'Pitof' Comar",
+    duration: "101 min",
+    image_file_name: "catwoman.png"
+  },
+  {
+    title: "Wonder Woman",
+    description:
+    %{
+      When a pilot crashes and tells of conflict in the outside world, Diana, an Amazonian warrior in training, leaves home to fight a war, discovering her full powers and true destiny.
+    }.squish,
+    released_on: "2017-06-02",
+    rating: "PG-13",
+    total_gross: 821_847_012,
+    director: "Patty Jenkins",
+    duration: "141 min",
+    image_file_name: "wonder-woman.png"
+  }
+])

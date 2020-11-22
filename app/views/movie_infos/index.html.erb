@@ -1,5 +1,8 @@
 <% @movie_infos.each do |movie| %>
 <section class="movie">
+  <div class="image">
+    <%= image_tag movie.image_file_name, class:"bg-transparent"%>
+  </div>
   <div class="summary">
     <h2>
       <%= link_to movie.title, movie_info_path(movie), class:" text-blue-400 hover:bg-white hover:text-black hover:no-underline" %>
@@ -9,9 +12,6 @@
         <%= total_gross(movie)%>
       </h3>
     </div>
-    <p>
-      <%= movie.starts_at.year%> 
-    </p>
     <p>
       <%= truncate(movie.description, length: 150, separator: ' ') %>
     </p>
