@@ -1,6 +1,6 @@
 class MovieInfosController < ApplicationController
   def index
-    @movie_infos = MovieInfo.all
+    @movie_infos = MovieInfo.released
   end
 
   def show
@@ -28,10 +28,16 @@ class MovieInfosController < ApplicationController
     redirect_to root_path
   end
 
+  def destroy
+    @movie_infos = MovieInfo.find(params[:id])
+    @movie_infos.destroy
+    redirect_to root_path
+  end
+  
   private
 
   def event_params
-    movie_param = params.require(:movie_info).permit(:title, :location, :total_gross, :starts_at, :description, :rating)
+    movie_param = params.require(:movie_info).permit(:title, :location, :total_gross, :starts_at, :description, :rating, :director, :duration, :image_file_name)
   end
 
 end
