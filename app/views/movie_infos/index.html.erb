@@ -1,31 +1,24 @@
-<p id="notice"><%= notice %></p>
+<% @movie_infos.each do |movie| %>
+<section class="movie">
+  <div class="summary">
+    <h2>
+      <%= link_to movie.title, movie_info_path(movie), class:" text-blue-400 hover:bg-white hover:text-black hover:no-underline" %>
+    </h2>
+    <div class="absolute right-0 top-0 text-right">
+      <h3 class="bg-yellow-500 text-white m-1 p-2">
+        <%= total_gross(movie)%>
+      </h3>
+    </div>
+    <p>
+      <%= movie.starts_at.year%> 
+    </p>
+    <p>
+      <%= truncate(movie.description, length: 150, separator: ' ') %>
+    </p>
+  </div>
+</section>
+<% end %>
 
-<h1>Movie Infos</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Rating</th>
-      <th>Total gross</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @movie_infos.each do |movie_info| %>
-      <tr>
-        <td><%= link_to movie_info.title, movie_path(movie_info) %></td>
-        <td><%= movie_info.rating %></td>
-        <td><%= movie_info.total_gross %></td>
-        <td><%= link_to 'Show', movie_info %></td>
-        <td><%= link_to 'Edit', edit_movie_info_path(movie_info) %></td>
-        <td><%= link_to 'Destroy', movie_info, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Movie Info', new_movie_info_path %>
+<section class="admin">
+  <%= link_to "Add New Event", new_movie_info_path , class:"button"%>
+</section>

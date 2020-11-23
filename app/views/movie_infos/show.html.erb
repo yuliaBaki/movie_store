@@ -1,20 +1,22 @@
-<p id="notice"><%= notice %></p>
-<% @movie_infos.each do |movie_info| %>
- <% end %>
-<p>
-  <strong>Title:</strong>
-  <%= @movie_info.title %>
-</p>
+<section class="movie-details">
+  <div class="details">
+    <h1 class= "font-bold text-blue-400"><%= @movie_infos.title %></h1>
+    <h2>
+      
+    </h2>
+    <p class="mb-10">
+      <%= @movie_infos.description %>
+    </p>
+    <table>
+      <tr>
+        <th class="text-xl text-blue-600">Total Price:</th>
+        <td class="text-xl "><%= total_gross(@movie_infos) %></td>
+      </tr>
+    </table>
+  </div>
+</section>
+<section class="admin ">
+  <%= link_to 'Edit', edit_movie_info_path(@movie_infos), class: "button" %>
+</section>
 
-<p>
-  <strong>Rating:</strong>
-  <%= @movie_info.rating %>
-</p>
-
-<p>
-  <strong>Total gross:</strong>
-  <%= @movie_info.total_gross %>
-</p>
-
-<%= link_to 'Edit', edit_movie_info_path(@movie_info) %> |
-<%= link_to 'Back', movie_infos_path %>
+<p class="pb-52 mb-56"></p>
