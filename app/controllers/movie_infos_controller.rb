@@ -24,8 +24,11 @@ class MovieInfosController < ApplicationController
 
   def create
     @movie_infos = MovieInfo.new(event_params)
-    @movie_infos.save
-    redirect_to root_path
+    if @movie_infos.save
+      redirect_to root_path
+    else
+      render :new
+    end
   end
 
   def destroy
@@ -37,7 +40,7 @@ class MovieInfosController < ApplicationController
   private
 
   def event_params
-    movie_param = params.require(:movie_info).permit(:title, :location, :total_gross, :starts_at, :description, :rating, :director, :duration, :image_file_name)
+    movie_param = params.require(:movie_info).permit(:title, :location, :total_gross, :released_on, :description, :rating, :director, :duration, :image_file_name)
   end
 
 end

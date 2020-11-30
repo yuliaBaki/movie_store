@@ -5,7 +5,7 @@ $off-white: #EDEDED;
 $dark-gray: #666;
 $medium-gray: #6c757d;
 $light-gray: #c2c2c2;
-$blue:#4299e1;
+$blue: #237CBE;
 $light-blue: lighten($blue, 40%);
 $orange: #E8890C;
 $yellow: #ffc107;
@@ -389,6 +389,11 @@ section.admin {
 		letter-spacing: 1px;
 		text-transform: uppercase;
 	}
+}
+
+section.movie + section.admin {
+  border-top: none;
+	padding-top: 0;
 }
 
 // Aside
