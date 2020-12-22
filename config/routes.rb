@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :registrations
   resources :movie_infos
   root to: 'movie_infos#index'
 
