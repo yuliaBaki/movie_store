@@ -14,8 +14,11 @@ class MovieInfosController < ApplicationController
   def update
     #fail
     @movie_infos = MovieInfo.find(params[:id]) #get the id of the movie
-    @movie_infos.update(event_params) 
-    redirect_to movie_info_path
+    if @movie_infos.update(event_params) 
+      redirect_to movie_info_path, notice:"Movie is successfully updated!"
+    else
+      render :edit
+    end
   end
 
   def new
@@ -25,7 +28,7 @@ class MovieInfosController < ApplicationController
   def create
     @movie_infos = MovieInfo.new(event_params)
     if @movie_infos.save
-      redirect_to root_path
+      redirect_to root_path, notice:"Movie is successfully created!"
     else
       render :new
     end
@@ -34,7 +37,7 @@ class MovieInfosController < ApplicationController
   def destroy
     @movie_infos = MovieInfo.find(params[:id])
     @movie_infos.destroy
-    redirect_to root_path
+    redirect_to root_path, alert:"Movie is successfully destroyed!"
   end
   
   private
