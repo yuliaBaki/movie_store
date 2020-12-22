@@ -7,7 +7,7 @@
 
   <div class="field">
     <%= form.label :rating %>
-    <%= form.text_field :rating %>
+    <%= f.select :rating, MovieInfo::RATINGS, prompt: "Pick one" %>
   </div>
 
   <div class="field">
